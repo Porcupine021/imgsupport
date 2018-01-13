@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ImgSupport (Demo)</title>
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+  <style>
+    html, body { margin:0; padding:0; }
+    .support-table { margin: 2em auto 0 auto; border-collapse: collapse; border-spacing: 0; }
+    .support-table thead { background-color: #f2e8d5; }
+    .support-table th, .support-table td { border: 1px solid #000; padding: 0.5em; font: normal normal normal 1.5em/1 Arial, Helvetica, Verdana, sans-serif; text-align: left; }
+    .support-table th { color: #000; font-weight: bold; }
+    .support-table td { color: #fff; }
+    .support { background-color: #39b54a; }
+    .no-support { background-color: #c44230; }
+
+  </style>
+</head>
+<body>
+
+  <table class="support-table">
+  <thead>
+    <tr>
+      <th>Image Format</th>
+      <th>Supported</th>
+    </tr>
+  </thead>
+  <tbody id="support-body"></tbody>
+  </table>
+
+  <script src="../js/ImgSupport.js"></script>
+  <script>
+    ImgSupport.test(function(supports){
+      renderImageSupportTable(supports);
+    });
+
+    function renderImageSupportTable(supports){
+      var html = '', className, label, i;
+      for(i in supports){
+        className = supports[i] ? 'support' : 'no-support';
+        label = supports[i] ? 'Yes' : 'No';
+        html += '<tr class="'+className+'"><td>'+i+'</td><td>'+label+'</td></tr>';
+      }
+      document.getElementById('support-body').innerHTML = html;
+    }
+  </script>
+
+</body>
+</html>
+
+
+
