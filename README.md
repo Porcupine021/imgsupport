@@ -2,8 +2,8 @@
 A javascript library for detecting support of less common image formats like WebP, JPEG-2000, and JPEG-XR.
 
 ## Usage
-Include the script on your page. Call the ImgSupport.test() method, which accepts a callback function.
-The callback function will be passed a simple object containing information about which image formats
+Include the script on your page. Call the `ImgSupport.test()` method which takes a callback function as its first argument.
+The callback function will be passed an object containing information about which image formats
 are supported by the browser.
 ```html
 <script src="ImgSupport.js"></script>
@@ -14,7 +14,7 @@ are supported by the browser.
 </script>
 ```
 
-Outputs to the console
+The above example outputs the following to the console:
 ```json
 {
   "jp2": 0,
