@@ -18,7 +18,7 @@ Outputs to the console
 ```json
 {
   "jp2": 0,
-  "jpx": ,0
+  "jpx": 0,
   "webp-alpha": 1,
   "webp-animation": 1,
   "webp-lossless": 1,
