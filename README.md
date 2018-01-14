@@ -1,5 +1,5 @@
 # ImgSupport.js
-A javascript library for detecting support of less common image formats like WebP, JPEG-2000, and JPEG-XR.
+A javascript library to detect support for less common image formats like WebP, JPEG-2000, and JPEG-XR.
 
 ## Usage
 Include the script on your page. Call the `ImgSupport.test()` method which takes a callback function as its first argument.
